@@ -6,6 +6,7 @@ class Decoreco < Formula
   license "CC0-1.0"
 
   depends_on "rust" => :build
+  depends_on "ffmpeg"
 
   def install
     system "cargo", "install", "--locked", "--root", prefix, "--path", "."
