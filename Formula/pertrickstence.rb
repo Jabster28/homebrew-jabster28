@@ -5,9 +5,11 @@ class Pertrickstence < Formula
   sha256 "f7c1dac2b5bddede81dc7ca3ced9ae7e0a61479f0779d02c7126cf616612277d"
   license "CC0-1.0"
 
-  depends_on "rust" => :build
+  # requires nightly rust
+
+  depends_on "rustup-init" => :build
 
   def install
-    system "cargo", "install", "--locked", "--root", prefix, "--path", "."
+    system "cargo", "+nightly", "install", "--locked", "--root", prefix, "--path", "."
   end
 end
