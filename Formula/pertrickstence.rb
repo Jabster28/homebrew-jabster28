@@ -10,6 +10,11 @@ class Pertrickstence < Formula
   depends_on "rustup-init" => :build
 
   def install
-    system "cargo", "+nightly", "install", "--locked", "--root", prefix, "--path", "."
+    # install nightly rust
+    system Formula["rustup-init"].bin/"rustup-init", "-qy", "--no-modify-path",
+           "--default-toolchain", "nightly", "--profile", "minimal"
+    with_env(PATH: "#{HOMEBREW_CACHE}/cargo_cache/bin:#{ENV["PATH"]}") do
+      system "cargo", "+nightly", "install", "--locked", "--root", prefix, "--path", "."
+    end
   end
 end
