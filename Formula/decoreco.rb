@@ -3,7 +3,6 @@ class Decoreco < Formula
   homepage "https://github.com/Jabster28/decoreco"
   url "https://github.com/Jabster28/decoreco/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "c7d0401e687ede02d14a5682d280539377245c2644adf9721daef1c60bd234e0"
-  version "0.2.0"
   license "CC0-1.0"
 
   bottle do
