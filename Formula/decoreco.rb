@@ -6,10 +6,9 @@ class Decoreco < Formula
   license "CC0-1.0"
 
   bottle do
-    root_url "https://github.com/Jabster28/homebrew-jabster28/releases/download/decoreco-1"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, catalina:     "3539f9c2c7c8efbebbcb2252e0d98ddcb9b72df0af9d2cc0820901d85aef701d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "852d8317e988abbb395d09e3c573fe2d0624f3f3acaa74d46ee2f762805a742d"
+    root_url "https://github.com/Jabster28/homebrew-jabster28/releases/download/decoreco-0.2.0"
+    sha256 cellar: :any_skip_relocation, catalina:     "56a56e616c8bfa4f284b57fdb13cc99f7d58448d6a9a4a52980547b579147bf5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9d93c8acb44742c484f6501ed86651320d18192d368cf6afb931bb0a9337a90f"
   end
 
   depends_on "rust" => :build
